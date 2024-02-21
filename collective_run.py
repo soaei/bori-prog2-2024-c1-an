@@ -39,10 +39,14 @@ class Runner:
     def run(self):
         remaining = set(self.solutions)
         for in_size, q_size in SIZES:
-            for s in self.solutions:
+            for s in self.valid_solutions:
                 if s not in remaining:
                     continue
-                times = main(s, in_size, q_size, seed=self.seed)
+                try:
+                    times = main(s, in_size, q_size, seed=self.seed)
+                except Exception as e:
+                    print(f"{s} failed with {e}")
+                    continue
                 if float(times[-1]) > MAX_TIME:
                     remaining.remove(s)
 
