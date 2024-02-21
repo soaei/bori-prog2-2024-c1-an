@@ -21,7 +21,8 @@ class Runner:
         self.solutions = [
             s.name
             for s in Path(".").iterdir()
-            if s.is_dir() and s.name not in [".github", "__pycache__", RUNDIR, BASIS]
+            if s.is_dir()
+            and s.name not in [".git", ".github", "__pycache__", RUNDIR, BASIS]
         ]
         self.valid_solutions = []
         self.seed = int(time.time() * 100000) // 17
