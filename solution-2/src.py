@@ -10,10 +10,10 @@ if __name__ == "__main__":
     query_values = query_df.values
 
     # Compute pairwise squared Euclidean distances
-    diffs = distance.cdist(input_values, query_values, metric="euclidean")
+    diffs = distance.cdist(input_values, query_values, metric="sqeuclidean")
 
     # Get the minimum distances and corresponding indices
-    min_indices = np.argmin(diffs, axis=0)
+    min_indices = np.argmin(diffs, axis=0)  # Lehet nem az 0 kéne az axis-nál?
     min_distances = np.min(diffs, axis=0)
 
     # Get the corresponding "weapon" values using min_indices
