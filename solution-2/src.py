@@ -10,7 +10,7 @@ if __name__ == "__main__":
     query_values = query_df.values
 
     # Compute pairwise squared Euclidean distances
-    diffs = np.sum((input_values[:, None, :] - query_values) ** 2, axis=2)
+    diffs = distance.cdist(input_values, query_values, metric="euclidean")
 
     # Get the minimum distances and corresponding indices
     min_indices = np.argmin(diffs, axis=0)
