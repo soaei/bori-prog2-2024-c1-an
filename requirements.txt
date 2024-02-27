@@ -1,1 +1,4 @@
 typer
+pandas
+numpy
+scipy
