@@ -1,4 +1,1 @@
-pip install --upgrade pip
-pip install pandas
-pip install numpy
-pip install scipy
+pip install -r requirements.txt
