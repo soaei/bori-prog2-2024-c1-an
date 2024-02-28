@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.spatial import distance
 
+
 if __name__ == "__main__":
     df = pd.read_pickle("input.pkl")
     query_df = pd.read_csv("query.csv")
