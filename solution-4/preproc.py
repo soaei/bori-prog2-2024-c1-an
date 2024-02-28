@@ -5,6 +5,7 @@ import pickle
 if __name__ == "__main__":
     df = pd.read_csv("input.csv")
 
+    # Build tree and save it as pickle
     tree = KDTree(df[["x", "y"]])
 
     with open("tree.pkl", "wb") as file:

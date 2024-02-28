@@ -3,7 +3,6 @@ import pickle
 
 
 if __name__ == "__main__":
-
     df = pd.read_pickle("input.pkl")
     query_df = pd.read_csv("query.csv")
 

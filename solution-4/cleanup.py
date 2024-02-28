@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-
+# Convert out file to csv
 df = pd.read_feather("out.feather")
 df.to_csv("out.csv", index=False)
 
