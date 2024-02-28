@@ -13,6 +13,6 @@ if __name__ == "__main__":
 
     weapon_values = df.iloc[indices]["weapon"].values
 
-    out_df = pd.DataFrame({"dist": distances, "weapon": weapon_values})
-
-    out_df.to_feather("out.feather")
+    pd.DataFrame({"dist": distances, "weapon": weapon_values}).to_csv(
+        "out.csv", index=False
+    )

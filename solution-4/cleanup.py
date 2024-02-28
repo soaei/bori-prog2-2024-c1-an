@@ -1,11 +1,5 @@
-import pandas as pd
 import os
 
-# Convert out file to csv
-df = pd.read_feather("out.feather")
-df.to_csv("out.csv", index=False)
-
-# Delete files
 directory = os.path.dirname(__file__)
 extensions_to_delete = [".pkl", ".feather"]
 
