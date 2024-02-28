@@ -1,17 +1,13 @@
 import pandas as pd
-
-# import pickle
-from scipy.spatial import KDTree
+import pickle
 
 
 if __name__ == "__main__":
     df = pd.read_pickle("input.pkl")
     query_df = pd.read_csv("query.csv")
 
-    # with open("tree.pkl", "rb") as file:
-    #    tree = pickle.load(file)
-
-    tree = KDTree(df[["x", "y"]])
+    with open("tree.pkl", "rb") as file:
+        tree = pickle.load(file)
 
     distances, indices = tree.query(query_df, k=1)
 
